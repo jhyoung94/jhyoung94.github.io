@@ -1,5 +1,7 @@
 /* Reset Styles */
-
+body{
+  background-color: #0000006b;
+}
 * {
   box-sizing: border-box;
 }
