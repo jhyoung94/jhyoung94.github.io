@@ -1,3 +1,8 @@
+/* Reset Styles */
+
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
@@ -11,21 +16,20 @@ img {
 .hidden {
   display: none;
 }
+/* Styles for Desktop/Laptop */
 #container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   color: white;
   text-shadow: 1px 1px 5px black;
 }
 
 #wallpaper {
   z-index: -99;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -34,6 +38,7 @@ img {
   pointer-events: none;
   background-color: #000;
 }
+
 #wallpaper img {
   width: 100%;
   height: 100%;
@@ -46,19 +51,22 @@ img {
   transition: opacity 0.35s;
   pointer-events: none;
 }
+
 main {
-  width: 100%;
-  height: 100vh;
+  width: 70%;
+  margin: 0 auto;
 }
 
 #clock {
   margin: 0;
   font-size: 8em;
 }
+
 #greeting {
   margin: 0;
   font-size: 3em;
 }
+
 input {
   background: none;
   border: none;
@@ -66,12 +74,14 @@ input {
   font-size: 1.5em;
   text-align: center;
 }
+
 input::placeholder {
   color: white;
   font-size: 0.9em;
   text-align: center;
   width: 100%;
 }
+
 ul#todo-list {
   padding: 0;
   list-style: none;
@@ -80,6 +90,7 @@ ul#todo-list {
   margin: 10px;
   text-align: center;
 }
+
 button {
   cursor: pointer;
   background: none;
@@ -97,6 +108,122 @@ button {
   margin: 10px;
   text-align: center;
 }
+
 #weather {
   margin: 10px;
+}
+
+/* Styles for Tablet */
+@media only screen and (min-width: 768px) {
+  main {
+    width: 90%;
+  }
+}
+
+/* Styles for Mobile */
+@media only screen and (max-width: 480px) {
+  #container {
+    text-align: center;
+  }
+
+  #wallpaper {
+    position: static;
+    height: 200px;
+  }
+
+  #wallpaper img {
+    height: 100%;
+    opacity: 1;
+  }
+
+  main {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #clock {
+    font-size: 4em;
+  }
+
+  #greeting {
+    font-size: 2em;
+  }
+
+  input {
+    font-size: 1em;
+  }
+
+  input::placeholder {
+    font-size: 0.8em;
+  }
+
+  ul#todo-list {
+    font-size: 1em;
+  }
+
+  #quote {
+    margin: 5px;
+  }
+
+  #weather {
+    margin: 5px;
+  }
+}
+
+/* Styles for Small Mobile */
+@media only screen and (max-width: 320px) {
+  #container {
+    text-align: center;
+  }
+
+  #wallpaper {
+    position: static;
+    height: 150px;
+  }
+
+  #wallpaper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* add this line */
+    -o-object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    border: 0;
+    opacity: 0.8;
+    transition: opacity 0.35s;
+    pointer-events: none;
+  }
+
+  main {
+    width: 100%;
+    padding: 5px;
+  }
+
+  #clock {
+    font-size: 3em;
+  }
+
+  #greeting {
+    font-size: 1.5em;
+  }
+
+  input {
+    font-size: 0.8em;
+  }
+
+  input::placeholder {
+    font-size: 0.7em;
+  }
+
+  ul#todo-list {
+    font-size: 0.8em;
+  }
+
+  #quote {
+    margin: 5px;
+  }
+
+  #weather {
+    margin: 5px;
+  }
 }
