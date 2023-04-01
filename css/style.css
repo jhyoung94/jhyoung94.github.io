@@ -1,5 +1,5 @@
 /* Reset Styles */
-body{
+body {
   background-color: #0000006b;
 }
 * {
@@ -124,7 +124,11 @@ button {
 
 /* Styles for Mobile */
 @media only screen and (max-width: 480px) {
-  #loginFrm,#todo-frm input[type="text"] {
+  body {
+    background-color: #0000006b;
+  }
+  #loginFrm,
+  #todo-frm input[type="text"] {
     width: 80%;
     background-color: grey;
   }
@@ -178,7 +182,11 @@ button {
 
 /* Styles for Small Mobile */
 @media only screen and (max-width: 320px) {
-  #loginFrm,#todo-frm input[type="text"] {
+  body {
+    background-color: #0000006b;
+  }
+  #loginFrm,
+  #todo-frm input[type="text"] {
     width: 80%;
     background-color: grey;
   }
