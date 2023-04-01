@@ -122,6 +122,10 @@ button {
 
 /* Styles for Mobile */
 @media only screen and (max-width: 480px) {
+  #loginFrm,#todo-frm input[type="text"] {
+    width: 80%;
+    background-color: grey;
+  }
   #container {
     text-align: center;
   }
@@ -172,6 +176,10 @@ button {
 
 /* Styles for Small Mobile */
 @media only screen and (max-width: 320px) {
+  #loginFrm,#todo-frm input[type="text"] {
+    width: 80%;
+    background-color: grey;
+  }
   #container {
     text-align: center;
   }
