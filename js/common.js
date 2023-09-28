@@ -3,6 +3,6 @@ const isEmpty = (val) => {
     typeof val == "undefined" ||
     val == null ||
     val == "" ||
-    val.replace(/ /gi, "") == ""
+    val.replace(/\s+/g, "") == ""
   );
 };
